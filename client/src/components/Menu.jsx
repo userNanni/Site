@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Menu = () => {
     const posts = [
         {
             id: 1,
@@ -10,8 +10,10 @@ const Home = () => {
             img: "lorem"
         },
     ];
+
     return (
-        <div className='home'>
+        <div className='menu'>
+            <h2>Outros Posts</h2>
             <div className="posts">
                 {posts.map((post) => (
                     <div className="post" key={post.id}>
@@ -20,8 +22,7 @@ const Home = () => {
                         </div>
                         <div className="content">
                             <Link className='link' to={`/post/${post.id}`}>
-                                <h1>{post.title}</h1>
-                                <p>{post.desc}</p>
+                                <h3>{post.title}</h3>
                             </Link>
                         </div>
                     </div>
@@ -31,4 +32,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Menu
