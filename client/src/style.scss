@@ -214,13 +214,113 @@ $lightgrey : #F1F1F1;
         }
 
         .menu {
-            h2{
+            h2 {
                 padding-bottom: 1rem;
             }
+
             .posts {
                 display: flex;
                 flex-direction: row;
                 gap: 1rem;
+            }
+        }
+
+        .add {
+            display: flex;
+            gap: 4rem;
+
+            .content {
+                flex: 5;
+                justify-content: center;
+
+                input {
+                    width: 80%;
+                    margin: 2rem 1rem;
+                    padding: 1rem;
+                    border: transparent;
+                    background-color: transparent;
+                    border-bottom: 1px solid $lightyellow;
+                    color: $lightyellow;
+                }
+            }
+
+            .menu {
+                flex: 2;
+
+                .file {
+                    cursor: pointer;
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: $lightgrey;
+                    }
+                }
+
+                .item {
+                    div {
+                        display: flex;
+                        gap: 0.5rem;
+                    }
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    h1 {
+                        margin: 1rem 2rem 0 2rem;
+                    }
+
+                    input[type="radio"] {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        background-color: transparent;
+                        margin: 0;
+
+                        font: inherit;
+                        color: $lightgrey;
+                        width: 1.15em;
+                        height: 1.15em;
+                        border: 0.15em solid $lightgrey;
+                        border-radius: 50%;
+                        transform: translateY(-0.075em);
+
+                        display: grid;
+                        place-content: center;
+                    }
+
+                    input[type="radio"]::before {
+                        content: "";
+                        width: 0.65em;
+                        height: 0.65em;
+                        border-radius: 50%;
+                        transform: scale(0);
+                        transition: 120ms transform ease-in-out;
+                        box-shadow: inset 1em 1em var($lightgrey);
+                        background-color: $lightgrey;
+                    }
+
+                    input[type="radio"]:checked::before {
+                        transform: scale(1);
+                    }
+
+                    input[type="radio"]:focus {
+                        outline: max(2px, 0.15em) solid $lightgrey;
+                        outline-offset: max(2px, 0.15em);
+                    }
+                }
+
+                button {
+                    margin: 0.5rem;
+                    padding: 0.5rem;
+                    border: transparent;
+                    color: $darkgrey;
+                    background-color: $lightyellow;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $lightgrey;
+                    }
+                }
             }
         }
 
