@@ -1,0 +1,183 @@
+$darkgrey : #100F0F;
+$darkgreen : #0F3D3E;
+$lightyellow : #E2DCC8;
+$lightgrey : #F1F1F1;
+
+.app {
+    background-color: $darkgrey;
+    color: $lightgrey;
+    display: flex;
+    justify-content: center;
+
+
+    .container {
+        width: 80vw;
+
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .auth {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+
+            h1 {
+                font-size: 1.5rem;
+                color: $lightgrey;
+                margin-bottom: 3rem;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 25vw;
+                padding: 2rem;
+                background-color: $darkgreen;
+                border-radius: 0.5rem;
+                gap: 1.5rem;
+
+                input {
+                    padding: 1rem;
+                    border: transparent;
+                    background-color: transparent;
+                    border-bottom: 1px solid $lightyellow;
+
+                    placeholder {
+                        color: $lightyellow;
+                    }
+                }
+
+                button {
+                    padding: 1rem;
+                    border: transparent;
+                    color: $darkgrey;
+                    background-color: $lightyellow;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $lightgrey;
+                    }
+                }
+
+                span {
+                    font-size: 0.8rem;
+                    color: $lightyellow;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    color: red;
+                    text-align: center;
+                }
+
+                .Link {
+                    color: $lightgrey;
+                }
+            }
+        }
+
+        .navbar {
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .links {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                }
+
+                span {
+                    cursor: pointer;
+                }
+
+                .write {
+                    padding: 1rem;
+                    border: transparent;
+                    color: $darkgrey;
+                    background-color: $lightyellow;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $lightgrey;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            margin-top: 10vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 1rem;
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .home {
+            .posts {
+                margin: 3rem;
+                display: flex;
+                flex-direction: column;
+                gap: 8rem;
+
+                .post {
+                    display: flex;
+
+                    .img {
+                        flex: 1;
+                    }
+
+                    .content {
+                        flex: 2;
+                    }
+                }
+            }
+        }
+
+        .single {
+            display: flex;
+            gap: 3rem;
+
+            img {
+                padding-top: 2rem;
+                width: 100%;
+                height: 50%;
+                object-fit: cover;
+            }
+
+            .content {
+                .user {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    font-size: 0.8rem;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+    }
+}
